@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+.section {
+    background-color: #fdd59f;
+    color: $clr-lighter;
+    padding: 50px;
+    transition: 0.5s;
+
+    &.initing {
+        display: none;
+    }
+
+    &.leaving {
+        background-color: $clr-contrast;
+    }
+    @for $i from 1 through 4{
+        &.bg#{$i} {
+            background-color: nth($clr-collection, $i);
+        }
+    }
+    // &.bg1{background-color: $clr-page1;}
+
+}
+
+.center {
+    text-align: center;
+}
+
+.cb{
+    zoom: 1;
+    &:after{
+        content: ".";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+        overflow: hidden;
+    }
+}
+
+.mb10{
+    margin-top: -15px;
+}
+
+.f-pr{
+    position: relative;
+}
+
+.f-fr{
+    float: right;
+}

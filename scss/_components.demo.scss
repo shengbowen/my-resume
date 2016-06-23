@@ -1,0 +1,25 @@
+.panel{
+    position: absolute;
+    right: 10%; 
+    top: 50%;
+    // display:none;
+    width: 500px;
+    padding: 10px;
+    transform: translate(0, -50%);
+    background-color: black;
+    opacity: 0.3;
+    dt{
+        font-size: 25px;
+        a{
+            // color: red;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+    }
+    dl{
+        p{
+            font: 20px "microsoft yahei";
+            color: $clr-page-text;
+        }
+    }
+}

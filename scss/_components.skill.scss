@@ -1,0 +1,130 @@
+#skill_list{
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    font-size: 16px;
+    height: 400px;
+    .skill_list_content{
+        float: left;
+        margin: 0 8%;
+        // position: relative;
+        visibility: hidden;
+    }
+    .skill_icon{
+        cursor: pointer;
+        background-size: 100%;
+        width: 90px;
+        height: 100px;
+        text-align: center;
+        margin: 30px auto;
+        // -webkit-transform: scale()
+        // transform: scale(1.0);\
+        transition: transform .25s;
+        &:hover, &.scale{
+            transform: scale(1.2);
+        }
+    }
+
+    .skill_name{
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+
+    #skill_icon1{
+        background: url(../img/seo.png) no-repeat ;
+    }
+    #skill_icon2{
+        background: url(../img/html.png) no-repeat ;
+    }
+    #skill_icon3{
+        background: url(../img/css.png) no-repeat ;
+    }
+    #skill_icon4{
+        background: url(../img/js.png) no-repeat ;
+    }
+
+    ul{
+        // position: absolute;
+        // width: 300px;
+        // left: 50%;
+        // top: 50%;
+        // 
+        list-style: disc;
+        list-style-position: inside;
+    }
+
+    .skill_int{
+        position: absolute;
+        width: 300px;
+        left: 50%;
+        // top: 50%;
+        margin-left: -150px;
+        display: none;
+        font-size: 14px;
+        line-height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 15px;
+        background: #c8c8dc;
+        
+        li{
+            font-size: 12px;
+            padding-left: 15px;
+        }
+    }
+
+    //skill初始化时的动画效果
+    .skill_scale{
+        -webkit-animation: skill_scale 1s;
+        -moz-animation: lskill_scale 1s;
+        -o-animation: skill_scale 1s;
+        animation: skill_scale 1s;
+        visibility: visible;
+    }
+
+    @-webkit-keyframes skill_scale{
+        0% {
+            opacity: 0.1;
+            -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+        }
+        100%{
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    
+    @-moz-keyframes skill_scale {
+        0% {
+            opacity: 0.1;
+            transform:scale(0.3);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);    
+        }
+    }
+    @-o-keyframes skill_scale {
+        0% {
+            opacity: 0.1;
+            transform:scale(0.3);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);    
+        }
+    }
+    @keyframes skill_scale {
+        0% {
+            opacity: 0.1;
+            transform:scale(0.3);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);    
+        }
+    }
+
+}
