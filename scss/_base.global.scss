@@ -15,7 +15,7 @@
     &.leaving {
         background-color: $clr-contrast;
     }
-    @for $i from 1 through 4{
+    @for $i from 1 through 6{
         &.bg#{$i} {
             background-color: nth($clr-collection, $i);
         }

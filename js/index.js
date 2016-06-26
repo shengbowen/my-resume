@@ -8,19 +8,16 @@ $(document).ready(function() {
     if (mobilecheck()) {
         $('html').addClass('mobile');
     } else {
-        var en = ['Home', 'Projects', 'Professions', 'Education',
-                'Internship', 'Current Position', 'Contact Me'];
-        var cn = ['首页', '项目', '技能', '教育', '实习', '供职', '联系'];
-        var isCn = window.location.href.indexOf('cn.html') >= 0;
+        var cn = ['首页', '个人作品', '专业技能', '工作经历', '教育背景', '关于我'];
         $('.section').addClass('initing');
         $('#pagepiling').fullpage({
-            anchors: ["home1","project1","profession1"],
+            anchors: ["main","project","skills", "work", "edu", "abouts"],
             verticalCentered: true,
             resize: false,
             loopBottom: true,
             navigation: {
                 'position': 'left',
-                'tooltips': isCn ? cn : en
+                'tooltips': cn
             },
             onLeave: function(index, nextIndex, direction) {
                 var $pages = $('.section');
@@ -35,7 +32,10 @@ $(document).ready(function() {
             afterLoad: function(anchorLink, index){
                 if(index ===3 ){
                     $('.skill_list_content').addClass('skill_scale');
-                    setTimeout(function(){$('#skill_int1').fadeIn(500)}, 1000);
+                    setTimeout(function(){$('.skill_icon').first().click()}, 1000);
+                }
+                if(index === 2){
+                    $('.demo_link')[0].click();
                 }
             }
         });
@@ -53,9 +53,17 @@ $(document).ready(function() {
         //作品展示事件处理
         $('.demo_link').click(function(){
             var parent = $(this).closest('.col-4');
-            var s= parent.siblings('.panel');
-            // var s = $('this').closest('.col-4').siblings('.panel');
-            s.SlideRight();
+            var panel= parent.siblings('.panel');
+            if(panel.hasClass('z-selected')) return;
+            $('.panel').each(function(){
+                $(this).hide().removeClass('z-selected');
+            });
+            $('.demo_link').each(function(){
+                $(this).removeClass('z-selected');
+            });
+            $(this).addClass('z-selected');
+            panel.addClass('z-selected');
+            panel.slideDown();
         });
 
     }

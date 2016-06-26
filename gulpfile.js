@@ -33,7 +33,7 @@ gulp.task('browser-sync', function(){
 
 gulp.task('serve', ['sass'],function(){
     browerSync.init({server: "./"});
-    gulp.watch("cn.html").on('change', reload);
+    gulp.watch("index.html").on('change', reload);
     gulp.watch("scss/*.scss", ['sass']);
 });
 

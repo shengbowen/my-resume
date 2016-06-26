@@ -32,7 +32,7 @@
     }
 
     #skill_icon1{
-        background: url(../img/seo.png) no-repeat ;
+        background: url(../img/tool.png) no-repeat ;
     }
     #skill_icon2{
         background: url(../img/html.png) no-repeat ;
@@ -56,21 +56,25 @@
 
     .skill_int{
         position: absolute;
-        width: 300px;
+        width: 500px;
         left: 50%;
         // top: 50%;
-        margin-left: -150px;
+        margin-left: -250px;
         display: none;
         font-size: 14px;
         line-height: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid transparent;
         border-radius: 10px;
+        box-shadow: 0 0 2px 2px #f9aa8b;
         padding: 15px;
-        background: #c8c8dc;
-        
+        ul{
+            text-align: left;
+        }
         li{
             font-size: 12px;
-            padding-left: 15px;
+            margin-bottom: 5px;
+            font: 20px "microsoft yahei";
+            color: #eee9ed;
         }
     }
 
@@ -128,3 +132,11 @@
     }
 
 }
+
+.work, .edu{
+    p{
+        color: #fff;
+    }
+}
+
+
